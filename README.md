@@ -1,4 +1,4 @@
-# Bird Species Classification with ResNet-50
+# Bird Species Classification using convolutional neural network
 
 A deep learning project utilizing ResNet-50 to classify images of 100 different bird species. This model uses transfer learning with data augmentation, learning rate scheduling, early stopping, and cross-entropy loss to achieve accurate classification.
 
