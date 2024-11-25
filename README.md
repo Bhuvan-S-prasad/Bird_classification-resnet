@@ -11,6 +11,7 @@ A deep learning project utilizing ResNet-50 to classify images of 100 different 
 - [Prediction](#prediction)
 - [Usage](#usage)
 - [Results](#results)
+- [Acknowledgement](#Acknowledgement)
 
 ## Overview
 This project implements a bird species classifier using a modified ResNet-50 architecture trained on a custom dataset with 100 bird species. Data augmentation is applied to improve model generalization, and training metrics are logged to track model performance.
@@ -64,3 +65,5 @@ The prediction pipeline allows inference on new bird images using the trained Re
 ## Results
 The final model achieves notable accuracy on the validation set. Check the saved logs for per-epoch metrics and performance analysis.
 
+## Acknowledgement
+this project is done under guidance of [Dr Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu)
