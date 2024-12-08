@@ -964,7 +964,7 @@ bird_details = {
 # Model setup
 model = models.resnet50(weights=None)
 model.fc = torch.nn.Linear(model.fc.in_features, len(class_names))  # Adjust for number of classes
-state_dict = torch.load(r"C:\Users\bhuva\Desktop\bird_flask\new_bird_model.pth", map_location=device)
+state_dict = torch.load(r"new_bird_model.pth", map_location=device)
 model.load_state_dict(state_dict)
 model = model.to(device)
 model.eval()
