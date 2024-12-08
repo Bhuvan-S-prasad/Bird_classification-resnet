@@ -1036,7 +1036,5 @@ def predict():
 
 if __name__ == '__main__':
     # Ensure upload folder exists
-    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
-
-    # Run the app
-    app.run()
+    port = int(os.environ.get('PORT', 5000))  # Default to 5000 if PORT is not set
+    app.run(host='0.0.0.0', port=port)
