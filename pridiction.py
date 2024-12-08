@@ -40,6 +40,6 @@ def predict_image(image_path):
     return class_name
 
 # Example usage
-image_path = r"C:\Users\bhuva\Desktop\67385111-480px.jpg" # Replace with the path to your bird image
+image_path = r"C:\Users\bhuva\Downloads\images (1).jpeg" # Replace with the path to your bird image
 predicted_class = predict_image(image_path)
 print(f'Predicted class: {predicted_class}')
