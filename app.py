@@ -988,6 +988,9 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     """Handle image upload and return the prediction."""
+    global model
+    if model is None:
+        model = torch.load('new_bird_model.pth', map_location=torch.device('cpu'))
     print("Request received at /predict") 
     if 'file' not in request.files:
         return jsonify({'error': 'No file uploaded'}), 400

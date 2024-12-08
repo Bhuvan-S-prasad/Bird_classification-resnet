@@ -26,6 +26,11 @@ dropZone.addEventListener("drop", (e) => {
     }
 });
 
+dropZone.addEventListener("click", () => {
+    fileInput.click(); // Open file browser dialog
+});
+
+
 // Function to show image preview
 function showPreview(file) {
     const reader = new FileReader();
