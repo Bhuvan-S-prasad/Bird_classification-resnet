@@ -1039,4 +1039,4 @@ if __name__ == '__main__':
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
     # Run the app
-    app.run(debug=True)
+    app.run()
