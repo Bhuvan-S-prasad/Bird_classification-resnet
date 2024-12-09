@@ -6,7 +6,7 @@ A deep learning project utilizing ResNet-50 to classify images of 100 different 
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Dataset](#dataset)
-- [Class] (#Class)
+- [Class] (#Class Names)
 - [Model Architecture](#model-architecture)
 - [Training Pipeline](#training-pipeline)
 - [Prediction](#prediction)
