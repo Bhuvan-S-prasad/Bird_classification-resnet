@@ -6,7 +6,7 @@ A deep learning project utilizing ResNet-50 to classify images of 100 different 
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Dataset](#dataset)
-- [Class](#Class Names)
+- [Classes](#Classes)
 - [Model Architecture](#model-architecture)
 - [Training Pipeline](#training-pipeline)
 - [Prediction](#prediction)
@@ -39,7 +39,7 @@ pip install torch torchvision scikit-learn pandas numpy seaborn matplotlib tqdm 
 ## Dataset
 The dataset consists of three folders: `train`, `val`, and `test`, located in the `data_dir` directory. Each folder contains images categorized by bird species. This project uses a `[70-20-10]` split for training, validation, and testing.
 
-## Class Names
+## Classes
 
 The dataset contains the following bird species along with an "unknown" class:
 
