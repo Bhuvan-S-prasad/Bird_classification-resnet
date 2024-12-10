@@ -4,21 +4,17 @@ from PIL import Image
 
 from torchvision import datasets, transforms, models
 
-# Load the trained model (make sure the model architecture matches the one used during training)
-model = models.resnet50(num_classes=100)  # Replace `ResNet50` with your model definition
+model = models.resnet50(num_classes=100)  
 model.load_state_dict(torch.load('C:/Users/bhuva/Desktop/FINAL/codes/best_model_50.pth', map_location=torch.device('cpu')))
 model.eval()
 
-# Define the transformations to match those used during training
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),  # Resize to match input dimensions
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # Normalize using ImageNet mean and std
+    transforms.Resize((224, 224)),  
+    transforms.ToTensor(),# Normalize using ImageNet mean and std
 ])
 
-# Load and preprocess the image
 def predict_image(image_path):
-    image = Image.open(image_path).convert('RGB')  # Load the image and convert to RGB if needed
+    image = Image.open(image_path).convert('RGB') 
     image = transform(image)  # Apply transformations
     image = image.unsqueeze(0)  # Add a batch dimension
 
@@ -32,14 +28,11 @@ def predict_image(image_path):
     # Make the prediction
     with torch.no_grad():
         outputs = model(image)
-        _, predicted = torch.max(outputs, 1)  # Get the class index with the highest score
-
-    # Convert the class index to the class name
+        _, predicted = torch.max(outputs, 1)  
     class_idx = predicted.item()
-    class_name = class_names[class_idx]  # Replace `class_names` with your list of bird class names
-    return class_name
+    class_name = class_names[class_idx]  
 
 # Example usage
-image_path = r"C:\Users\bhuva\Downloads\images (1).jpeg" # Replace with the path to your bird image
+image_path = r"" #--> image path here...
 predicted_class = predict_image(image_path)
 print(f'Predicted class: {predicted_class}')

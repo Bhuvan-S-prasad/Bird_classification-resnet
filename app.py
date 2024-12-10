@@ -51,7 +51,7 @@ class_names = [
     "098.Scott_Oriole", "099.Ovenbird", "100.Brown_Pelican", "unknown"
 ]
 
-#image
+
 
 bird_details = {
     "001.Black_footed_Albatross": {
@@ -963,7 +963,7 @@ bird_details = {
 
 # Model setup
 model = models.resnet50(weights=None)
-model.fc = torch.nn.Linear(model.fc.in_features, len(class_names))  # Adjust for number of classes
+model.fc = torch.nn.Linear(model.fc.in_features, len(class_names)) 
 state_dict = torch.load(r"new_bird_model.pth", map_location=device)
 model.load_state_dict(state_dict)
 model = model.to(device)
@@ -1005,7 +1005,6 @@ def predict():
         file.save(filepath)
 
         try:
-            # Process the image
             image = Image.open(filepath).convert('RGB')
             image = transform(image).unsqueeze(0).to(device)
 
@@ -1014,10 +1013,8 @@ def predict():
                 output = model(image)
                 _, predicted = torch.max(output, 1)
 
-            # Get the class name
             predicted_class = class_names[predicted.item()]
 
-            # Retrieve bird details
             details = bird_details.get(predicted_class, None)
 
             response = {
@@ -1035,6 +1032,5 @@ def predict():
         return jsonify({'error': 'Invalid file type. Allowed types are PNG, JPG, JPEG'}), 400
 
 if __name__ == '__main__':
-    # Ensure upload folder exists
-    port = int(os.environ.get('PORT', 5000))  # Default to 5000 if PORT is not set
+    port = int(os.environ.get('PORT', 5000))  
     app.run(host='0.0.0.0', port=port)
