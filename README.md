@@ -6,6 +6,7 @@ A deep learning project utilizing ResNet-50 to classify images of 100 different 
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Dataset](#dataset)
+- [Classes](#Classes)
 - [Model Architecture](#model-architecture)
 - [Training Pipeline](#training-pipeline)
 - [Prediction](#prediction)
@@ -37,6 +38,113 @@ pip install torch torchvision scikit-learn pandas numpy seaborn matplotlib tqdm 
 
 ## Dataset
 The dataset consists of three folders: `train`, `val`, and `test`, located in the `data_dir` directory. Each folder contains images categorized by bird species. This project uses a `[70-20-10]` split for training, validation, and testing.
+
+## Classes
+
+The dataset contains the following bird species along with an "unknown" class:
+
+1. Black-footed Albatross  
+2. Laysan Albatross  
+3. Sooty Albatross  
+4. Groove-billed Ani  
+5. Crested Auklet  
+6. Least Auklet  
+7. Parakeet Auklet  
+8. Rhinoceros Auklet  
+9. Brewer Blackbird  
+10. Red-winged Blackbird  
+11. Rusty Blackbird  
+12. Yellow-headed Blackbird  
+13. Bobolink  
+14. Indigo Bunting  
+15. Lazuli Bunting  
+16. Painted Bunting  
+17. Cardinal  
+18. Spotted Catbird  
+19. Gray Catbird  
+20. Yellow-breasted Chat  
+21. Eastern Towhee  
+22. Chuck-will's-widow  
+23. Brandt's Cormorant  
+24. Red-faced Cormorant  
+25. Pelagic Cormorant  
+26. Bronzed Cowbird  
+27. Shiny Cowbird  
+28. Brown Creeper  
+29. American Crow  
+30. Fish Crow  
+31. Black-billed Cuckoo  
+32. Mangrove Cuckoo  
+33. Yellow-billed Cuckoo  
+34. Gray-crowned Rosy Finch  
+35. Purple Finch  
+36. Northern Flicker  
+37. Acadian Flycatcher  
+38. Great Crested Flycatcher  
+39. Least Flycatcher  
+40. Olive-sided Flycatcher  
+41. Scissor-tailed Flycatcher  
+42. Vermilion Flycatcher  
+43. Yellow-bellied Flycatcher  
+44. Frigatebird  
+45. Northern Fulmar  
+46. Gadwall  
+47. American Goldfinch  
+48. European Goldfinch  
+49. Boat-tailed Grackle  
+50. Eared Grebe  
+51. Horned Grebe  
+52. Pied-billed Grebe  
+53. Western Grebe  
+54. Blue Grosbeak  
+55. Evening Grosbeak  
+56. Pine Grosbeak  
+57. Rose-breasted Grosbeak  
+58. Pigeon Guillemot  
+59. California Gull  
+60. Glaucous-winged Gull  
+61. Heermann's Gull  
+62. Herring Gull  
+63. Ivory Gull  
+64. Ring-billed Gull  
+65. Slaty-backed Gull  
+66. Western Gull  
+67. Anna's Hummingbird  
+68. Ruby-throated Hummingbird  
+69. Rufous Hummingbird  
+70. Green Violetear  
+71. Long-tailed Jaeger  
+72. Pomarine Jaeger  
+73. Blue Jay  
+74. Florida Jay  
+75. Green Jay  
+76. Dark-eyed Junco  
+77. Tropical Kingbird  
+78. Gray Kingbird  
+79. Belted Kingfisher  
+80. Green Kingfisher  
+81. Pied Kingfisher  
+82. Ringed Kingfisher  
+83. White-breasted Kingfisher  
+84. Red-legged Kittiwake  
+85. Horned Lark  
+86. Pacific Loon  
+87. Mallard  
+88. Western Meadowlark  
+89. Hooded Merganser  
+90. Red-breasted Merganser  
+91. Mockingbird  
+92. Nighthawk  
+93. Clark's Nutcracker  
+94. White-breasted Nuthatch  
+95. Baltimore Oriole  
+96. Hooded Oriole  
+97. Orchard Oriole  
+98. Scott's Oriole  
+99. Ovenbird  
+100. Brown Pelican  
+101. Unknown
+
 
 ## Model Architecture
 This project uses a pre-trained ResNet-50 architecture modified to classify 100 bird species:
