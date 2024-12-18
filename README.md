@@ -2,7 +2,6 @@
 
 A deep learning project utilizing ResNet-50 to classify images of 100 different bird species. This model uses transfer learning with data augmentation, learning rate scheduling, early stopping, and cross-entropy loss to achieve accurate classification.
 
-check the working application: [web-production-4c59.up.railway.app](web-production-4c59.up.railway.app/)
 
 ## Table of Contents
 - [Overview](#overview)
