@@ -961,7 +961,7 @@ bird_details = {
 
 
 
-# Model setup
+# Model
 model = models.resnet50(weights=None)
 model.fc = torch.nn.Linear(model.fc.in_features, len(class_names)) 
 state_dict = torch.load(r"new_bird_model.pth", map_location=device)
