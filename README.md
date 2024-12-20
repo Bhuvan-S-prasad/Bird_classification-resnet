@@ -173,6 +173,7 @@ The prediction pipeline allows inference on new bird images using the trained Re
 
 ## Results
 The final model achieves notable accuracy on the validation set. Check the saved logs for per-epoch metrics and performance analysis.
+finally deployed the flask application with railway.app 
 
 ## Acknowledgement
 this project is done under guidance of [Dr Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu)
