@@ -168,7 +168,7 @@ The prediction pipeline allows inference on new bird images using the trained Re
 - The `predict_image()` function loads the image, applies transformations, and returns the predicted bird species.
 
 ## application
-- ```app.py``` built using flask
+- ```app.py``` built using flask and deployed in railway.app
 
 ## Usage
 - **Training**: Run `training.ipynb` to train the model. Adjust `data_dir`, `num_epochs`, and `batch_size` as needed.
