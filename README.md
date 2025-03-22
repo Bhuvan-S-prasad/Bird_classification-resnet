@@ -171,12 +171,19 @@ The prediction pipeline allows inference on new bird images using the trained Re
 - ```app.py``` built using flask and deployed in railway.app
 
 ## Usage
-- **Training**: Run `training.ipynb` to train the model. Adjust `data_dir`, `num_epochs`, and `batch_size` as needed.
+
 - **Prediction**: Use `prediction.py` to classify images. Update `image_path` and `model_path` accordingly.
 
 ## Results
 The final model achieves notable accuracy on the validation set. Check the saved logs for per-epoch metrics and performance analysis.
-finally deployed the flask application with railway.app 
+finally deployed the flask application with the railway.app 
 
 ## Acknowledgement
-this project is done under guidance of [Dr Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu)
+This project is done under the guidance of [Dr Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu)
+
+## Future Enhancement
+- **Ensemble Approach**: Perform ensembling using at least 5 pre-trained models and compare their performance vs training from scratch.
+- **Explainability**: Explore explainable approaches via GradCAM, SHAP & LIME.
+
+
+
